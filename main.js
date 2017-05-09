@@ -27,5 +27,15 @@ function catchTheButton() {
     clickedbutton.style.top = (clickedbutton.offsetTop -
     clickedbutton.offsetHeight) + 'px';
   }
+
+  if (clickedbutton.offsetLeft < 0){
+    clickedbutton.style.left = (clickedbutton.offsetLeft +
+      clickedbutton.offsetWidth*2) + 'px';
+
+  } else if (clickedbutton.offsetTop < 0){
+    clickedbutton.style.top = (clickedbutton.offsetTop -
+    clickedbutton.offsetHeight*2) + 'px';
+  }
 }
+
 init()
